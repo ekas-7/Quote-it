@@ -1,10 +1,12 @@
 const express = require("express");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
+const methodOverride = require("method-override");
 
 const app = express();
 const port = 8090;
 
+app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -29,7 +31,7 @@ let posts = [
         username: "Bruce Lee",
         content: "Don't ask GOD for an easy life, ask GOD for the strength to endure a hard one",
     }
-];
+]
 
 app.get("/posts", (req, res) => {
     res.render("index.ejs", { posts });
@@ -48,16 +50,40 @@ app.post("/posts", (req, res) => {
 
 app.get("/posts/:id", (req, res) => {
     const { id } = req.params;
-    const post = posts.find(p => p.id === id);
-    res.render("show.ejs", { post });
+    const post = posts.find((p) => id === p.id);
+    if (post) {
+        res.render("show.ejs", { post });
+    } else {
+        res.status(404).send("Post not found");
+    }
 });
 
-app.patch("/posts/:id",(req,res)=>{
-    const { id }=req.params;
-    const newcontent=req.body.content;
-    const post = posts.find(p => p.id === id);
-    post.content=newcontent;
-    res.send("Patch req working");
+app.get("/posts/:id/edit", (req, res) => {
+    const { id } = req.params;
+    const post = posts.find((p) => id === p.id);
+    if (post) {
+        res.render("edit.ejs", { post });
+    } else {
+        res.status(404).send("Post not found");
+    }
+});
+
+app.patch("/posts/:id", (req, res) => {
+    const { id } = req.params;
+    const { content } = req.body;
+    const post = posts.find((p) => id === p.id);
+    if (post) {
+        post.content = content;
+        res.redirect('/posts');
+    } else {
+        res.status(404).send("Post not found");
+    }
+});
+
+app.delete("/posts/:id",(req,res)=>{
+    const{id}= req.params;
+    posts=posts.filter((p)=> id!== p.id);
+    res.redirect("/posts")
 })
 
 app.listen(port, () => {
