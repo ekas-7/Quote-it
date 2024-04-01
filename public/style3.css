@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+body {
+    background-color: #161623;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 35vw;
+    height: 35vw;
+    background-image: linear-gradient(#ffc107, #e91e63);
+    border-radius: 50%;
+    position: fixed;
+    top: 6vh;
+    left: -4vw;
+    z-index: -1;
+}
+
+.circle2 {
+    width: 28vw;
+    height: 28vw;
+    background-image: linear-gradient(#2196f3, #31ff38);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 4vh;
+    right: -5vw;
+    z-index: -1;
+}
+
+form {
+    margin-top: 5%;
+    width: 65%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+    color: aqua;
+    font-size: 24px;
+    padding: 40px;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(20px);
+    font-family: 'Rubik Scribble', sans-serif;
+}
+
+form h1 {
+    font-family: "Rubik Scribble", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Rubik Scribble', sans-serif;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Rubik Scribble', sans-serif;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    width: 50%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form button:hover {
+    background-color: #0b7dda;
+}
+

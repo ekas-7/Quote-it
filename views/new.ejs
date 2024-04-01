@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style2.css">
     <title>Create New post</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap"
+    />
 </head>
 <body>
-    <form action="/posts" method="post">
-        <input type="text" placeholder="Enter Username" name="username"><br><br>
-        <textarea name="content" placeholder="Write a Quote" cols="30" rows="10"></textarea><br><br>
-        <button>Post</button>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <form action="/posts" method="post" class="post"
+    data-tilt
+    data-tilt-glare
+    data-tilt-max-glare="0.2"
+    data-tilt-scale="1.05">
+         <h1>ADD YOUR QUOTE</h1>
+        <input type="text" placeholder="Enter Username" name="username">
+        <textarea name="content" placeholder="Write a Quote" cols="30" rows="10"></textarea>
+        <button>QUOTE IT!!</button>
     </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 </body>
 </html>

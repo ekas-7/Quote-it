@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Quote</title>
+    <link rel="stylesheet" href="/style3.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap"
+    />
 </head>
 <body>
     
-    <h2>Edit your post</h2>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <form action="/posts/<%= post.id %>?_method=PATCH" method="post"
+        data-tilt
+    data-tilt-glare
+    data-tilt-max-glare="0.2"
+    data-tilt-scale="1.05">
+     <h1>Edit your post</h1>
     <p>Post id : <%= post.id %></p>
     <p>Post username : @<%= post.username %></p>
-    <form action="/posts/<%= post.id %>?_method=PATCH" method="post">
         <textarea name="content" cols="30" rows="10"><%= post.content %></textarea><br><br>
         <button>Comfirm Changes</button>
     </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 </body>
 </html>

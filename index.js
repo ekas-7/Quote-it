@@ -138,7 +138,7 @@ app.get("/posts/:id", (req, res) => {
     const { id } = req.params;
     const post = posts.find((p) => id === p.id);
     if (post) {
-        res.render("show.ejs", { post });
+        res.render("show.ejs", { post,posts });
     } else {
         res.status(404).send("Post not found");
     }

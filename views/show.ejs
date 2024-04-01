@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Individual post</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/stlyle4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap">
 </head>
 <body>
-    <h2>Here is ur post in detail</h2>
-    <p>Post id : <%= post.id %></p>
-    <div class="post">
-        <h3 class="user"> @<%= post.username  %></h3>
-        <h4><%= post.content %></h4>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <div class="head">
+        <a href="#" class="sticky-link">Here are all posts</a>
+        <a href="#">~From <%= post.username %></a>
     </div>
-    
+    <div class="other-posts">
+        <% for(pe of posts) { if(pe.username===post.username){ %>
+            <div
+              class="post"
+              data-tilt
+              data-tilt-glare
+              data-tilt-max-glare="0.2"
+              data-tilt-scale="1.05"
+            >
+              <h4><%= pe.content %></h4>
+              <h3 class="user">~<%= pe.username %></h3>
+            </div>
+        <% } }%>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 </body>
 </html>
