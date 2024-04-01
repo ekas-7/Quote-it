@@ -1,9 +1,193 @@
-h1{
-    color: maroon;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
-.post{
-    background-color: blanchedalmond;
+
+body {
+    background-color: #161623;
 }
-.user{
+
+.circle {
+    width: 35vw;
+    height: 35vw;
+    background-image: linear-gradient(#ffc107, #e91e63);
+    border-radius: 50%;
+    position: fixed;
+    top: 6vh;
+    left: -4vw;
+    z-index: -1;
+}
+
+.circle2 {
+    width: 28vw;
+    height: 28vw;
+    background-image: linear-gradient(#2196f3, #31ff38);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 4vh;
+    right: -5vw;
+    z-index: -1;
+}
+
+.head {
+    position: sticky;
+    top: 0;
+    background-color: #161623;
+    padding: 20px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161623;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    width: 100%;
+}
+
+.head::before {
+    content: "";
+    position: absolute;
+    z-index: -200;
+    height: 2.5px; /* Full height */
+    width: 100%; /* Full width */
+    background: linear-gradient(to right,
+        #eca9bd,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7
+    );
+    background-size: 600% 100%; /* Increase background size */
+    top: -0.1em;
+    animation: rainbowBox 10s linear infinite; /* Apply animation */
+}
+
+.head::after {
+    content: "";
+    position: absolute;
+    z-index: -200;
+    height: 2.5px; /* Full height */
+    width: 100%; /* Full width */
+    background: linear-gradient(to right,
+        #eca9bd,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7
+    );
+    background-size: 600% 100%; /* Increase background size */
+    bottom: -0.1em;
+    animation: rainbowBox 10s linear infinite; /* Apply animation */
+}
+
+@keyframes rainbowBox {
+    0% {
+        background-position: 0 0; /* Start position */
+    }
+    50% {
+        background-position: 100% 0; /* End position */
+    }
+    100%{
+        background-position: 0% 0;
+    }
+}
+
+.sticky-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Decrease font size */
+    padding: 8px 16px; /* Adjust padding */
+}
+
+.posts {
+    z-index: 10;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    width: 65%;
+    color: aqua;
+    font-size: 24px; /* Decrease font size */
+    padding: 20px; /* Adjust padding */
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transform: translateZ(20px);
+}
+
+.post:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #161623;
+    transition: background-color 0.3s ease;
+}
+
+.post h4 {
+    font-size: 24px; /* Decrease font size */
+    font-family: "Rubik Scribble", sans-serif; /* Use Rubik Scribble font */
+    font-weight: 900;
+}
+
+.post h3 {
+    font-size: 16px; /* Decrease font size */
+}
+
+.user {
     font-style: italic;
+    align-self: flex-start; /* Align @username to the start of flex container */
+    margin-left: auto;
+    margin-right: 20px; /* Adjust margin */
+}
+
+.btns {
+    display: flex; /* Use flexbox */
+    justify-content: space-around; /* Distribute buttons horizontally */
+    width: 27%; /* Take half width */
+    margin-top: 10px; /* Adjust margin */
+}
+
+a, button {
+    text-decoration: none;
+    font-size: 16px; /* Decrease font size */
+    padding: 8px;
+    background-color: #0f0f0f; /* Background color */
+    color: #fff; /* Text color */
+    border: 2px solid #0f0f0f; /* Transparent border initially */
+    transition: border-color 0.3s, color 0.3s; /* Smooth transition for border and text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 50%;
+}
+
+a:hover, button:hover {
+    border-color: #0ff; /* Neon color for border on hover */
+    color: #0ff; /* Neon color for text on hover */
+}
+
+.head a{
+    font-size: 34px; /* Decrease font size */
+    padding: 0px;
+    background-color: #161623;
+    color: #fff; 
+    border: 0px;
+    font-family: "Rubik Scribble", sans-serif; 
+    border-radius: 0px;
+    margin-left: 35px;
+    margin-right:35px ;
 }

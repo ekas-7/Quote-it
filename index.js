@@ -18,20 +18,106 @@ app.use(express.static(path.join(__dirname, "public")));
 let posts = [
     {
         id: uuidv4(),
-        username: "Ekaspreet Singh Atwal",
-        content: "I love coding",
+        username: "Albert Einstein",
+        content: "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution.",
     },
     {
         id: uuidv4(),
-        username: "Agamdeep Kaur Atwal",
-        content: "I love studying",
+        username: "Steve Jobs",
+        content: "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.",
     },
     {
         id: uuidv4(),
-        username: "Bruce Lee",
-        content: "Don't ask GOD for an easy life, ask GOD for the strength to endure a hard one",
+        username: "Maya Angelou",
+        content: "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+    },
+    {
+        id: uuidv4(),
+        username: "Walt Disney",
+        content: "All our dreams can come true, if we have the courage to pursue them.",
+    },
+    {
+        id: uuidv4(),
+        username: "Nelson Mandela",
+        content: "Education is the most powerful weapon which you can use to change the world.",
+    },
+    {
+        id: uuidv4(),
+        username: "Martin Luther King Jr.",
+        content: "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.",
+    },
+    {
+        id: uuidv4(),
+        username: "Abraham Lincoln",
+        content: "Whatever you are, be a good one.",
+    },
+    {
+        id: uuidv4(),
+        username: "Oprah Winfrey",
+        content: "The biggest adventure you can take is to live the life of your dreams.",
+    },
+    {
+        id: uuidv4(),
+        username: "Mark Twain",
+        content: "The two most important days in your life are the day you are born and the day you find out why.",
+    },
+    {
+        id: uuidv4(),
+        username: "Rosa Parks",
+        content: "You must never be fearful about what you are doing when it is right.",
+    },
+    {
+        id: uuidv4(),
+        username: "Stephen Hawking",
+        content: "Remember to look up at the stars and not down at your feet. Try to make sense of what you see and wonder about what makes the universe exist. Be curious.",
+    },
+    {
+        id: uuidv4(),
+        username: "Mahatma Gandhi",
+        content: "The best way to find yourself is to lose yourself in the service of others.",
+    },
+    {
+        id: uuidv4(),
+        username: "Helen Keller",
+        content: "The only thing worse than being blind is having sight but no vision.",
+    },
+    {
+        id: uuidv4(),
+        username: "Leonardo da Vinci",
+        content: "Learning never exhausts the mind.",
+    },
+    {
+        id: uuidv4(),
+        username: "Winston Churchill",
+        content: "Success consists of going from failure to failure without loss of enthusiasm.",
+    },
+    {
+        id: uuidv4(),
+        username: "Marie Curie",
+        content: "Life is not easy for any of us. But what of that? We must have perseverance and above all confidence in ourselves. We must believe that we are gifted for something and that this thing must be attained.",
+    },
+    {
+        id: uuidv4(),
+        username: "Vincent Van Gogh",
+        content: "I am seeking, I am striving, I am in it with all my heart.",
+    },
+    {
+        id: uuidv4(),
+        username: "Mother Teresa",
+        content: "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+    },
+    {
+        id: uuidv4(),
+        username: "Elon Musk",
+        content: "When something is important enough, you do it even if the odds are not in your favor.",
+    },
+    {
+        id: uuidv4(),
+        username: "Socrates",
+        content: "The only true wisdom is in knowing you know nothing.",
     }
-]
+];
+
 
 app.get("/posts", (req, res) => {
     res.render("index.ejs", { posts });

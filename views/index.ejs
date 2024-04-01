@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All posts</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <h1>Quora Posts</h1>
-    <%for(post of posts) {  %>
-        <div class="post">
-            <h3 class="user"> @<%= post.username  %></h3>
-            <h4><%= post.content %></h4>
-            <br>
-            <a href="http://localhost:8090/posts/<%=post.id%>">See in detail</a>
-            <a href="http://localhost:8090/posts/<%=post.id%>/edit">Edit</a>
-            <form action="http://localhost:8090/posts/<%=post.id%>?_method=DELETE" method="post" style="display: inline;">
-                <button>Delete</button>
-            </form>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Workbench&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <div class="head">
+      <a href="#" class="sticky-link">QUOTE IT!!</a>
+      <a href="http://localhost:8090/posts/new">Post Your Quote</a>
+    </div>
+    <div class="posts">
+      <% for(post of posts) { %>
+      <div
+        class="post"
+        data-tilt
+        data-tilt-glare
+        data-tilt-max-glare="0.2"
+        data-tilt-scale="1.05"
+      >
+        <h4><%= post.content %></h4>
+        <h3 class="user">~<%= post.username %></h3>
+        <div class="btns">
+          <a href="http://localhost:8090/posts/<%=post.id%>"
+            ><i class="fa-solid fa-circle-info"></i
+          ></a>
+          <a href="http://localhost:8090/posts/<%=post.id%>/edit"
+            ><i class="fa-regular fa-pen-to-square"></i
+          ></a>
+          <form
+            action="http://localhost:8090/posts/<%=post.id%>?_method=DELETE"
+            method="post"
+            style="display: inline"
+          >
+            <button><i class="fa-solid fa-trash"></i></button>
+          </form>
         </div>
-        <% } %>
-    <br>
-    <br>
-    <a href="http://localhost:8090/posts/new">Post Your Quote</a>
-</body>
-</html>
+      </div>
+      <% } %>
+    </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  </body>
+</html>
