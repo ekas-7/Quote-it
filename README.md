@@ -23,5 +23,5 @@ Quote It! is a simple web application where users can read, create, edit, and de
 ## Installation:
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ekas59425/Quote-it.git
    ```
