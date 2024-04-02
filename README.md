@@ -20,8 +20,13 @@ Quote It! is a simple web application where users can read, create, edit, and de
 - **Vanilla Tilt**: JavaScript library for adding a tilt effect to elements.
 - **Font Awesome**: Library for adding icons to the web pages.
 
-## Installation:
+## Getting Started:
 1. Clone the repository:
    ```bash
    git clone https://github.com/ekas59425/Quote-it.git
    ```
+2.Run on local host
+   ```bash
+   node index.js
+   ```
+3.Open your web browser and visit  [http://localhost:8090/](http://localhost:8090/) and Start posting
