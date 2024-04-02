@@ -24,3 +24,4 @@ Quote It! is a simple web application where users can read, create, edit, and de
 1. Clone the repository:
    ```bash
    git clone <repository-url>
+   ```
