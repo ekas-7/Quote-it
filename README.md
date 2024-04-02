@@ -21,7 +21,7 @@ Quote It! is a simple web application where users can read, create, edit, and de
 - **Font Awesome**: Library for adding icons to the web pages.
 
 ## Getting Started:
-1. Clone the repository:
+1.Clone the repository:
    ```bash
    git clone https://github.com/ekas59425/Quote-it.git
    ```
@@ -31,7 +31,7 @@ Quote It! is a simple web application where users can read, create, edit, and de
    ```
 3.Open your web browser and visit  [http://localhost:8090/](http://localhost:8090/) and Start posting
 
-# Usage
+## Usage
 
 Follow these steps to use the Quote It! application:
 
@@ -39,7 +39,7 @@ Follow these steps to use the Quote It! application:
 2. Click on "Post Your Quote" to create a new quote.
 3. Click on a quote to view its details, edit, or delete it.
 
-## Tech References
+## References
 
 - [Node.js](https://nodejs.org/)
 - [Express.js](https://expressjs.com/)
@@ -49,6 +49,6 @@ Follow these steps to use the Quote It! application:
 - [Vanilla Tilt](https://micku7zu.github.io/vanilla-tilt.js/)
 - [Font Awesome](https://fontawesome.com/)
 
-  ## Contributing
+## Contributing
 
 Feel free to contribute to the development of this chat application by creating issues or submitting pull requests.
