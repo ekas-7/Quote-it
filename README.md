@@ -30,3 +30,25 @@ Quote It! is a simple web application where users can read, create, edit, and de
    node index.js
    ```
 3.Open your web browser and visit  [http://localhost:8090/](http://localhost:8090/) and Start posting
+
+# Usage
+
+Follow these steps to use the Quote It! application:
+
+1. Visit the homepage to view all the available quotes.
+2. Click on "Post Your Quote" to create a new quote.
+3. Click on a quote to view its details, edit, or delete it.
+
+## Tech References
+
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [EJS](https://ejs.co/)
+- [UUID](https://www.npmjs.com/package/uuid)
+- [Faker.js](https://www.npmjs.com/package/faker)
+- [Vanilla Tilt](https://micku7zu.github.io/vanilla-tilt.js/)
+- [Font Awesome](https://fontawesome.com/)
+
+  ## Contributing
+
+Feel free to contribute to the development of this chat application by creating issues or submitting pull requests.
