@@ -51,4 +51,4 @@ Follow these steps to use the Quote It! application:
 
 ## Contributing
 
-Feel free to contribute to the development of this chat application by creating issues or submitting pull requests.
+Feel free to contribute to the development of Quote It! by creating issues or submitting pull requests.
