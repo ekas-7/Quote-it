@@ -37,7 +37,7 @@ Quote It! is a simple web application where users can read, create, edit, and de
 ![Image 2](resources/4.png)
 ### Adding New Post
 ![Image 3](resources/2.png)
-### Detailed Post with Post time
+### Detailed all Posts from a user with Post time  
 ![Image 4](resources/3.png)
 
 
