@@ -30,6 +30,16 @@ Quote It! is a simple web application where users can read, create, edit, and de
    node index.js
    ```
 3.Open your web browser and visit  [http://localhost:8090/](http://localhost:8090/) and Start posting
+## Screenshots
+### Home
+![Image 1](resources/1.png)
+### Edit Your Post
+![Image 2](resources/4.png)
+### Adding New Post
+![Image 3](resources/2.png)
+### Detailed all Posts from a user with Post time  
+![Image 4](resources/3.png)
+
 
 ## Usage
 
